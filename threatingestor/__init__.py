@@ -28,7 +28,7 @@ class Ingestor:
         # Load config.
         try:
             logger.debug(f"Reading config from '{config_file}'")
-            self.config = config.Config(config_file)
+            self.config = threatingestor.config.Config(config_file)
         except (OSError, threatingestor.exceptions.IngestorError):
             # Error loading config.
             logger.exception("Couldn't read config")
